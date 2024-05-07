@@ -1,0 +1,20 @@
+[
+  {
+    "id": 25651,
+    "title": "German Tour: Parliament Quarter & Reichstag glass dome",
+    "price": 14,
+    "currency": "$",
+    "rating": 4.8,
+    "specialOffer": false,
+    "supplierId": 1
+  },
+  {
+    "id": 6960,
+    "title": "Skip the Line: Pergamon Museum Berlin Tickets",
+    "price": 21,
+    "currency": "$",
+    "rating": 4.8,
+    "specialOffer": false,
+    "supplierId": 2
+  }
+]
