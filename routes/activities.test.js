@@ -1,29 +1,27 @@
 const express = require('express');
 const request = require('supertest');
-const router = require('../routes/users');
+const router = require('../routes/activities');
 const mockData = require('../data/mockdata.json');
-const { getAllUsers } = require('../controllers/usersController');
+const { getAllActivities } = require('../controllers/activitiesController');
 
-// Mock the getAllUsers function
-jest.mock('../controllers/usersController', () => ({
-  getAllUsers: jest.fn(),
+// Mock the getAllActivities function
+jest.mock('../controllers/activitiesController', () => ({
+  getAllActivities: jest.fn(),
 }));
 
-// Sample user data for testing
-
-describe('GET /users', () => {
-  it('should return all users', async () => {
-    // Mock the getAllUsers function to return sampleUsers
-    getAllUsers.mockResolvedValueOnce(mockData);
+describe('GET /activities', () => {
+  it('should return all activities', async () => {
+    // Mock the getAllActivities function to return sampleactivities
+    getAllActivities.mockResolvedValueOnce(mockData);
 
     // Create an instance of the Express application
     const app = express();
 
     // Mount the router on the application instance
-    app.use('/users', router);
+    app.use('/activities', router);
 
     // Send a GET request to the route
-    const response = await request(app).get('/users');
+    const response = await request(app).get('/activities');
 
     // Verify the response
     expect(response.status).toBe(200);
@@ -31,18 +29,18 @@ describe('GET /users', () => {
   });
 
   it('should handle errors', async () => {
-    // Mock the getAllUsers function to throw an error
+    // Mock the getAllActivities function to throw an error
     const error = new Error('Internal Server Error');
-    getAllUsers.mockRejectedValueOnce(error);
+    getAllActivities.mockRejectedValueOnce(error);
 
     // Create an instance of the Express application
     const app = express();
 
     // Mount the router on the application instance
-    app.use('/users', router);
+    app.use('/getAllActivities', router);
 
     // Send a GET request to the route
-    const response = await request(app).get('/users');
+    const response = await request(app).get('/getAllActivities');
 
     // Verify the response
     expect(response.status).toBe(500);

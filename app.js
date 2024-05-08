@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-const usersRouter = require('./routes/users');
+const activitiesRouter = require('./routes/activities');
 
 // Middleware to parse JSON
 app.use(express.json());
 
 // Routes
-app.use('/api/v1/users', usersRouter);
+app.use('/api/v1/activities', activitiesRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

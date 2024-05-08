@@ -1,13 +1,13 @@
 const express = require('express');
 const request = require('supertest');
-const usersRouter = require('./routes/users');
+const activitiesRouter = require('./routes/activities');
 
-describe('GET /api/v1/users', () => {
+describe('GET /api/v1/activities', () => {
   it('should respond with status 200', async () => {
     const app = express();
-    app.use('/api/v1/users', usersRouter);
+    app.use('/api/v1/activities', activitiesRouter);
 
-    const response = await request(app).get('/api/v1/users');
+    const response = await request(app).get('/api/v1/activities');
 
     expect(response.status).toBe(200);
   });

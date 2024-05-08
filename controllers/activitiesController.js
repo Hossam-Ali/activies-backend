@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 
-// Get all users
-const getAllUsers = async () => {
+// Get all activities
+const getAllActivities = async () => {
   try {
     const data = await fs.readFile('data/data.json');
     return JSON.parse(data);
@@ -10,4 +10,4 @@ const getAllUsers = async () => {
   }
 };
 
-module.exports = { getAllUsers };
+module.exports = { getAllActivities };
