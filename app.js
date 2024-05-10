@@ -1,6 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const activitiesRouter = require('./routes/activities');
+
+// Allow requests from all origins
+app.use(cors());
 
 // Middleware to parse JSON
 app.use(express.json());
