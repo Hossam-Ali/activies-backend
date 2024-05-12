@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/v1/activities', activitiesRouter);
+app.use('/api/v1/', activitiesRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

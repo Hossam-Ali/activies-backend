@@ -6,7 +6,7 @@ const {
 } = require('../controllers/filterActivitiesController');
 
 // GET all activities
-router.get('/', async (_req, res) => {
+router.get('/activities', async (_req, res) => {
   try {
     const activities = await getAllActivities();
     res.json(activities);
@@ -16,7 +16,7 @@ router.get('/', async (_req, res) => {
   }
 });
 
-router.get('/search', async (req, res) => {
+router.get('/activities/search', async (req, res) => {
   try {
     const { title } = req.query;
     if (!title) {
