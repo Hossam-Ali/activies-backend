@@ -18,7 +18,7 @@ describe('GET /activities', () => {
     const app = express();
 
     // Mount the router on the application instance
-    app.use('/activities', router);
+    app.use('/', router);
 
     // Send a GET request to the route
     const response = await request(app).get('/activities');
@@ -37,10 +37,10 @@ describe('GET /activities', () => {
     const app = express();
 
     // Mount the router on the application instance
-    app.use('/getAllActivities', router);
+    app.use('/', router);
 
     // Send a GET request to the route
-    const response = await request(app).get('/getAllActivities');
+    const response = await request(app).get('/activities');
 
     // Verify the response
     expect(response.status).toBe(500);

@@ -5,7 +5,7 @@ const activitiesRouter = require('./routes/activities');
 describe('GET /api/v1/activities', () => {
   it('should respond with status 200', async () => {
     const app = express();
-    app.use('/api/v1/activities', activitiesRouter);
+    app.use('/api/v1/', activitiesRouter);
 
     const response = await request(app).get('/api/v1/activities');
 
