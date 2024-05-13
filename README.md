@@ -4,6 +4,11 @@
 
 A simple backend app enabling users to search for activities.
 
+## Frontend Repository
+
+The backend repository for this application can be found at:
+[Activities Frontend Repository](https://github.com/Hossam-Ali/activities-frontend)
+
 ## How to Run
 
 ### Prerequisites
