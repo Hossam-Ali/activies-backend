@@ -27,7 +27,7 @@ Before running the application, ensure you have the following installed:
    npm install
    ```
 
-### Starting the Server
+### Starting the Server without Docker
 
 To start the server, run:
 
@@ -36,6 +36,18 @@ npm start
 ```
 
 The server will start running on `http://localhost:3000`.
+
+### Running with Docker
+
+To run the application using Docker, make sure Docker is installed and follow these steps:
+
+1. Build and start the Docker container:
+
+```
+docker-compose up --build
+```
+
+This command will build the Docker image for the frontend application and start the container. You can access the application at `http://localhost:3000`.
 
 ## How to Run Tests
 
